@@ -1,59 +1,110 @@
 @charset "UTF-8";
-
-/* CSS Document */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
-
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root {
     --font1: 'Passion One', cursive;
     --font2: 'Sriracha', cursive;
     --font3: Verdana, Geneva, Tahoma, sans-serif;
-   
-
-
 }
 
-html,
 body {
-    height: 100vh;
-    background-color: darkgray;
+    min-height: 100vh;
+    background-color: #fff;
     font-family: var(--font3);
-
-
-
 }
 
 header {
-    background-color: black;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    color: white;
+    padding: 50px 0;
 }
 
-header > h1 {
-    padding-top: 50px;
+header>h1 {
+    font-family: var(--font1);
+    font-weight: 700;
     font-variant: small-caps;
-    font-size: 30px;
-    font-family: var(--font4);
-    padding-bottom: 50px;
+    font-size: clamp(24px, 6vw, 80px);
+    line-height: 1.2;
+    margin: 0;
 }
 
+/* Main para melhor semântica */
+main {
+    width: 100%;
+}
 
+/* Seções do cordel */
+section {
+    padding: 10vh 0 10vh 30px;
+}
+
+/* Seção normal */
+section.normal {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Seção com imagem de fundo */
+section.imagem {
+    background-color: #323232;
+    color: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.34);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Imagens específicas para cada seção */
+section#imagem1 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#imagem2 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+}
+
+section#imagem3 {
+    background-image: url('../imagens/tulips-4933492_1920.jpg');
+    background-position: center center;
+}
+
+/* Parágrafo dentro da seção imagem */
+section.imagem>p {
+    background-color: rgba(0, 0, 0, 0.47);
+    display: inline-block;
+    padding: 8px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Parágrafos do cordel */
 p {
     font-family: var(--font2);
+    font-size: clamp(16px, 3vw, 32px);
+    line-height: 1.5;
 }
 
+/* Espaçamento interno para simular dois blocos no último parágrafo */
+.espaco-paragrafo {
+    display: block;
+    padding-top: 32px;
+    /* ajuste conforme desejar */
+}
+
+/* Links do rodapé */
 a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: bolder;
+    font-weight: bold;
 }
 
 a:hover {
@@ -61,57 +112,10 @@ a:hover {
     text-decoration: underline;
 }
 
-section {
-    padding-bottom: 10vh;
-    padding-top: 10vh;
-    padding-left: 30px;
-}
-
-section.imagem>p {
-    background-color: rgba(0, 0, 0, 0.203);
-    width: 400px;
-}
-
-section.normal {
-    background-color: darkgray;
-    color: black;
-}
-
-section.imagem {
-    background-color: rgb(50, 50, 50);
-    color: white;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Rodapé */
 footer {
-    background-color: black;
+    background-color: #000;
     text-align: center;
-    color: white;
+    color: #fff;
     padding: 10px;
 }
