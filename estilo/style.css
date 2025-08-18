@@ -76,6 +76,7 @@ section#imagem2 {
 section#imagem3 {
     background-image: url('../imagens/tulips-4933492_1920.jpg');
     background-position: center center;
+    background-repeat: repeat;
 }
 
 /* Parágrafo dentro da seção imagem */
