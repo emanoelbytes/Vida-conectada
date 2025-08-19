@@ -65,7 +65,7 @@ section.imagem {
 /* Imagens específicas para cada seção */
 section#imagem1 {
     background-image: url('../imagens/background001.jpg');
-    background-position: right center;
+    background-position: center center;
     background-repeat: repeat-y;
 }
 
